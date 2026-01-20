@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styleUni.css">
+    <title>MY UNI PLAN</title>
+</head>
+<body>
+
+  
+  <main class="container">
+
+    <h1 class="page-title">
+      <%= name %> <span><%= work %></span>
+    </h1>
+
+    <ul class="uni-grid">
+      <% universities.forEach(u => { %>
+        <li class="uni-card">
+
+          <div class="img-wrap">
+            <img src="<%= u.image %>" alt="<%= u.name %>">
+          </div>
+
+          <h3><%= u.name %></h3>
+
+          <p><strong>Country:</strong> <%= u.country %></p>
+          <p><strong>QS Ranking:</strong> <%= u.qsRank %></p>
+          <p><strong>Course:</strong> <%= u.course %></p>
+
+          <a href="<%= u.courseLink %>" target="_blank" class="course-link">
+            View Course →
+          </a>
+
+        </li>
+      <% }) %>
+    </ul>
+
+    <h2 class="footer-title">
+      These are the shortlisted Public Universities
+    </h2>
+
+  </main>
+</body>
+
+</html>

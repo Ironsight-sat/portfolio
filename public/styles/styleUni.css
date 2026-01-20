@@ -1,0 +1,161 @@
+:root {
+  --bg: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --glass: blur(14px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(
+    1200px 600px at 10% 10%,
+    #1e293b,
+    #020617
+  );
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: clamp(20px, 5vw, 50px);
+  position: relative;
+  z-index: 2; /* stays above ambient background */
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.page-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.page-title span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.uni-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.uni-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uni-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.uni-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.uni-card:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.uni-card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.uni-card p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.course-link {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(56,189,248,0.45);
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+
+.footer-title {
+  text-align: center;
+  margin-top: 60px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .uni-card img {
+    height: 160px;
+  }
+}

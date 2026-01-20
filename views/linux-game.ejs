@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Linux | Terminal Game</title>
+
+  <link rel="stylesheet" href="/styles/styleIndex.css" />
+  <link rel="stylesheet" href="/styles/linuxGame.css" />
+</head>
+<body>
+
+    
+
+  <!-- Spider background -->
+  <canvas id="spider-canvas"></canvas>
+
+  
+
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo">ST</div>
+      <div class="nav-links">
+        <a href="/">← Back to Portfolio</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <h1 class="page-title">Learn Linux — Terminal Game</h1>
+
+    <div class="game-modes">
+      <button data-mode="travel">🧭 City Explorer</button>
+      <button data-mode="detective">🕵️ Detective Case</button>
+    </div>
+
+    <!-- CITY MAP -->
+<div class="city-map">
+  <div class="city" data-city="delhi">Delhi ❌</div>
+  <div class="city" data-city="berlin">Berlin ❌</div>
+  <div class="city" data-city="tokyo">Tokyo ❌</div>
+  <div class="city" data-city="newyork">New York ❌</div>
+</div>
+
+
+    <div id="terminal">
+      <div id="terminal-output"></div>
+      <div class="terminal-input">
+        <span>$</span>
+        <input id="commandInput" autocomplete="off" />
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/JS/spider.js"></script>
+  <script src="/JS/linuxGame.js"></script>
+</body>
+</html>

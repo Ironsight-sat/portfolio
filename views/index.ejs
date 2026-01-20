@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satyam Teotia | Portfolio</title>
+  <link rel="stylesheet" href="/styles/styleIndex.css" />
+  <link rel="stylesheet" href="/styles/rocket.css" />
+  
+
+</head>
+<body>
+
+    <div class="bg-animation"></div>
+    
+
+    
+
+
+  <!-- NAV -->
+  <nav class="nav load-in">
+    <div class="nav-inner">
+      <div class="logo">ST</div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="/about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="/resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <h1 class="load-in delay-1">
+        <%= name %><br />
+        <span><%= title %></span>
+      </h1>
+
+      <p class="intro load-in delay-2">
+        <%= intro %>
+      </p>
+
+      <div class="cta load-in delay-3">
+        <a href="#projects" class="primary-btn">View Projects</a>
+        <a href="#contact" class="secondary-btn">Contact</a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills reveal" id="skills">
+      <h2>Core Skills</h2>
+
+      <ul class="skill-grid">
+        <% skills.forEach(skill => { %>
+          <li class="reveal"><%= skill %></li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <!-- PROJECTS -->
+
+<!-- LINUX GAME PREVIEW -->
+<section class="projects-preview reveal" id="linux-game">
+  <h2>Linux Interactive Terminal Game</h2>
+
+  <p class="muted" style="max-width:700px;margin:20px auto;">
+    Practice Linux commands through interactive terminal challenges 
+    explore cities, solve detective cases, train commands, or freely experiment.
+  </p>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <h3>🧠 Learn Linux Terminal</h3>
+
+      <p class="muted">
+        A browser based Linux terminal simulator with multiple learning modes:
+        city exploration, detective investigations, guided command training,
+        and free practice.
+      </p>
+
+      <div class="project-tags">
+        <span>Linux</span>
+        <span>JavaScript</span>
+        <span>Systems</span>
+        <span>CLI</span>
+      </div>
+
+      <div class="project-actions">
+        <a href="/linux-game" class="primary-btn">Launch Game</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
+<section class="projects-preview" id="projects">
+  <h2 class="reveal">Featured Projects</h2>
+
+  <div class="projects-wrapper">
+
+    <!-- Project 1 -->
+    <div class="project-card reveal">
+      <h3>University Planning Dashboard</h3>
+      <p>
+        A responsive study-abroad planning tool that aggregates public
+        universities, QS rankings, and live CS / AI / Informatics course links.
+      </p>
+
+      <div class="project-tags">
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>EJS</span>
+        <span>CSS Grid</span>
+      </div>
+
+      <div class="project-actions">
+        <a href="/uni" target="_blank" class="primary-btn">
+          Live Demo
+        </a>
+        
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card reveal">
+      <h3>Online SQL Editor</h3>
+      <p>
+        A web-based SQL editor built with Next.js that allows users to write,
+        execute, and test SQL queries through a clean and interactive interface.
+      </p>
+
+      <div class="project-tags">
+        <span>Next.js</span>
+        <span>SQL</span>
+      </div>
+
+      <div class="project-actions">
+        
+        <a
+          href="https://github.com/Ironsight-sat/Sql-Editor"
+          target="_blank"
+          class="secondary-btn"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- research -->
+     <h2 class="reveal">Featured Research</h2>
+    <div class="project-card reveal-fade">
+      <h3>Network Intrusion Detection System Using SNORT( Custom Scripts )</h3>
+      <p>
+        This project focuses on building a Network Intrusion Detection System (NIDS) using SNORT, enhanced with custom detection scripts to improve network security monitoring. The system analyzes real-time network traffic to identify malicious activities such as unauthorized access, port scanning, denial-of-service attempts, and suspicious behavior patterns.
+        This project demonstrates how combining an open-source IDS with custom logic can strengthen defenses against modern network attacks.
+      </p>
+
+      <div class="project-tags">
+        <span>Cybersecurity</span>
+        <span>Linux</span>
+        <span>Python</span>
+        <span>VmWare</span>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+
+    
+
+  </main>
+
+  <footer class="footer reveal footer-fast" id="contact">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3>Satyam Teotia</h3>
+      <p>Full-Stack & Systems-Focused Engineer</p>
+      <p>Meerut, Uttar Pradesh, India</p>
+      
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:satyamteotia33@gmail.com">Email</a>
+      <a href="https://github.com/Ironsight-sat" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/satyam-teotia-26610119b/" target="_blank">LinkedIn</a>
+    </div>
+
+  </div>
+</footer>
+
+
+<script src="/js/animations.js"></script>
+
+</body>
+</html>
