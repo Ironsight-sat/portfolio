@@ -126,7 +126,7 @@ app.get("/uni", (req, res) => {
         country: "France",
         qsRank: "294",
         course: "Master Informatique / AI / Data Science",
-        image: "/images/grenoble.jpg.webp",
+        image: "/images/grenoble.jpg",
         courseLink: "https://www.univ-grenoble-alpes.fr/english/education/"
       },
       {
