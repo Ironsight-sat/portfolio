@@ -294,3 +294,66 @@ body {
     animation: none !important;
   }
 }
+
+/* =========================================================
+   MEDIA SECTIONS (Movies / Shows / Books / School)
+========================================================= */
+
+.about-media {
+  margin: 4.5rem 0;
+}
+
+.about-media h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid layout */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card */
+.media-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover */
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Images */
+.media-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title */
+.media-card h3 {
+  margin: 1rem 0 0.4rem;
+  color: #38bdf8;
+  font-size: 1.2rem;
+}
+
+/* Description */
+.media-card p {
+  padding: 0 1.2rem 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
