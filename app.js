@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index", {
     name: "Satyam Teotia",
-    title: "Full-Stack & Systems-Focused Engineer",
+    title: "Full Stack & Systems Focused Engineer",
     intro:
       "I build clean, scalable web applications with a strong focus on correctness, usability, and system-level thinking.",
     skills: [
